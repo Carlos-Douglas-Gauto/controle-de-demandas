@@ -57,6 +57,13 @@ function setupGlobalEvents() {
   $('#btn-new-task')?.addEventListener('click', () => {
     openTaskModal();
   });
+
+  // Tecla ESC para fechar qualquer modal
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      closeModal();
+    }
+  });
 }
 
 async function checkAuthStatus() {
@@ -214,6 +221,18 @@ async function loadAndRenderBoard(isMyTasksOnly = false) {
     `;
   }
 
+  const welcomeCardHtml = state.tasks.length === 0 ? `
+    <div class="welcome-card">
+      <div class="welcome-content">
+        <h2>👋 Olá, ${escapeHtml(state.user.name)}! Seja bem-vindo(a) à sua Mesa de Trabalho.</h2>
+        <p>Seu quadro está limpo para hoje. Clique em <strong>+ Nova Demanda</strong> para registrar sua primeira tarefa.</p>
+      </div>
+      <button class="button button-primary" onclick="openTaskModal()">
+        + Nova Demanda
+      </button>
+    </div>
+  ` : '';
+
   main.innerHTML = `
     <div class="page-heading">
       <div>
@@ -226,6 +245,7 @@ async function loadAndRenderBoard(isMyTasksOnly = false) {
       </button>
     </div>
 
+    ${welcomeCardHtml}
     ${filterBarHtml}
 
     <div class="board">
@@ -276,7 +296,7 @@ function renderCard(task) {
           <strong>${task.progress}%</strong>
         </div>
         <div class="progress">
-          <span style="width: ${task.progress}%"></span>
+          <span style="transform: scaleX(${task.progress / 100});"></span>
         </div>
         <div class="card-footer">
           <span class="card-owner">👤 ${escapeHtml(task.owner_name || 'Desconhecido')}</span>
@@ -629,7 +649,7 @@ function renderMeetingRow(task) {
       <div class="meeting-progress-col">
         <span>${escapeHtml(task.status)} (${task.progress}%)</span>
         <div class="progress" style="margin:0;">
-          <span style="width: ${task.progress}%; ${task.status === 'Realizado' ? 'background: var(--green);' : ''}"></span>
+          <span style="transform: scaleX(${task.progress / 100}); ${task.status === 'Realizado' ? 'background: var(--green);' : ''}"></span>
         </div>
       </div>
       <div>
