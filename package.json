@@ -1,0 +1,22 @@
+{
+  "name": "mesa-de-demandas",
+  "version": "1.0.0",
+  "description": "Mesa de trabalho para acompanhamento de demandas e reuniões",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "node tests/test_scenarios.js"
+  },
+  "keywords": [
+    "kanban",
+    "tasks",
+    "mesa-de-demandas"
+  ],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "cookie-parser": "^1.4.7",
+    "express": "^5.2.1"
+  }
+}

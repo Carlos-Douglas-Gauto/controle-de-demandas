@@ -1,0 +1,32 @@
+:root {
+  /* Design System — Mesa de trabalho */
+  --paper: #fffcf7;
+  --parchment: #f7f4ee;
+  --ink: #202624;
+  --muted: #68716d;
+  --pencil: #ddd9d0;
+  --blue: #1769aa;
+  --blue-wash: #e7f0f8;
+  --amber: #b97012;
+  --amber-wash: #fff1d8;
+  --green: #2e7d5b;
+  --red: #b23a3a;
+
+  /* Geometria e ritmo */
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 10px;
+  --radius-xl: 12px;
+  --radius-pill: 99px;
+
+  /* Espaçamento base 8px */
+  --space-1: 8px;
+  --space-2: 12px;
+  --space-3: 16px;
+  --space-4: 24px;
+  --space-5: 32px;
+  --space-6: 40px;
+
+  /* Tipografia */
+  --font-main: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+}

@@ -1,0 +1,15 @@
+# Dependências
+node_modules/
+
+# Banco de dados local (para não versionar dados locais de teste)
+*.sqlite
+*.sqlite-journal
+*.db
+
+# Logs e ambiente
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.env
+.DS_Store
+Thumbs.db
