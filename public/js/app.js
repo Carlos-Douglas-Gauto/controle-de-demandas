@@ -225,11 +225,8 @@ async function loadAndRenderBoard(isMyTasksOnly = false) {
     <div class="welcome-card">
       <div class="welcome-content">
         <h2>👋 Olá, ${escapeHtml(state.user.name)}! Seja bem-vindo(a) à sua Mesa de Trabalho.</h2>
-        <p>Seu quadro está limpo para hoje. Clique em <strong>+ Nova Demanda</strong> para registrar sua primeira tarefa.</p>
+        <p>Seu quadro está limpo para hoje. Clique no botão <strong>+ Nova Demanda</strong> acima para registrar sua primeira tarefa.</p>
       </div>
-      <button class="button button-primary" onclick="openTaskModal()">
-        + Nova Demanda
-      </button>
     </div>
   ` : '';
 
