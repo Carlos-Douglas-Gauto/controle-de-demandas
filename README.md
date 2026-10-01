@@ -5,7 +5,7 @@ Implementação em JavaScript, HTML e CSS baseada na **Especificação de Portab
 ## Características
 - **Tecnologia:** Node.js (v22+) com `node:sqlite` nativo (DatabaseSync) e `node:crypto` (scrypt).
 - **Backend:** Express com rotas RESTful para autenticação, demandas, gestão de pessoas e ata de reunião.
-- **Frontend:** HTML5 semântico, Vanilla CSS rigorosamente fiel ao Design System "Mesa de trabalho" (tokens: papel, pergaminho, tinta, lápis, azul, âmbar, verde e vermelho) e Vanilla JS modular para o Kanban, drag-and-drop e formulários.
+- **Frontend:** HTML5 semântico, Vanilla CSS rigorosamente fiel ao Design System "Controle de Demandas" (tokens: papel, pergaminho, tinta, lápis, azul, âmbar, verde e vermelho) e Vanilla JS modular para o Kanban, drag-and-drop e formulários.
 - **Segurança e RBAC:** Isolamento completo de dados no servidor — colaboradores visualizam e alteram somente as próprias demandas.
 - **Persistência:** Banco relacional SQLite local (`database.sqlite`) com foreign keys e persistência de sessões, notas de reunião e prazos.
 

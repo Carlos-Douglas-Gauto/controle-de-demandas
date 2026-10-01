@@ -1,7 +1,7 @@
 {
   "name": "mesa-de-demandas",
   "version": "1.0.0",
-  "description": "Mesa de trabalho para acompanhamento de demandas e reuniões",
+  "description": "Controle de Demandas para acompanhamento de demandas e reuniões",
   "main": "src/server.js",
   "scripts": {
     "start": "node src/server.js",

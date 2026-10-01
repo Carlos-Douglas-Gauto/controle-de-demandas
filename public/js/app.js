@@ -224,7 +224,7 @@ async function loadAndRenderBoard(isMyTasksOnly = false) {
   const welcomeCardHtml = state.tasks.length === 0 ? `
     <div class="welcome-card">
       <div class="welcome-content">
-        <h2>👋 Olá, ${escapeHtml(state.user.name)}! Seja bem-vindo(a) à sua Mesa de Trabalho.</h2>
+        <h2>👋 Olá, ${escapeHtml(state.user.name)}! Seja bem-vindo(a) ao seu Controle de Demandas.</h2>
         <p>Seu quadro está limpo para hoje. Clique no botão <strong>+ Nova Demanda</strong> acima para registrar sua primeira tarefa.</p>
       </div>
     </div>
@@ -233,7 +233,7 @@ async function loadAndRenderBoard(isMyTasksOnly = false) {
   main.innerHTML = `
     <div class="page-heading">
       <div>
-        <p class="eyebrow">Mesa de Trabalho</p>
+        <p class="eyebrow">Controle de Demandas</p>
         <h1>${pageTitle}</h1>
         <p class="lede">${pageLede}</p>
       </div>
@@ -1018,7 +1018,7 @@ function renderAuthView() {
     // Login
     cardHtml = `
       <div class="auth-card">
-        <p class="eyebrow">Mesa de Trabalho</p>
+        <p class="eyebrow">Controle de Demandas</p>
         <h1>Entrar na Mesa</h1>
         <p class="subtitle">Acesse sua conta para visualizar e organizar suas demandas diárias.</p>
         <form onsubmit="handleAuthSubmit(event, 'login')" class="form-grid" style="padding:0;">

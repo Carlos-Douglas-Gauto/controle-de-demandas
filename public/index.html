@@ -1,40 +1,46 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mesa de Demandas</title>
-  <link rel="stylesheet" href="/css/tokens.css" />
-  <link rel="stylesheet" href="/css/app.css" />
-</head>
-<body>
-  <!-- Área de Notificações / Toasts -->
-  <div id="notice-area" class="notice-area"></div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mesa de Demandas</title>
+    <link rel="stylesheet" href="/css/tokens.css" />
+    <link rel="stylesheet" href="/css/app.css" />
+  </head>
+  <body>
+    <!-- Área de Notificações / Toasts -->
+    <div id="notice-area" class="notice-area"></div>
 
-  <!-- Barra Superior -->
-  <header class="topbar" id="app-topbar" style="display: none;">
-    <div class="brand" data-nav="board">
-      <span class="brand-mark">●</span>
-      <span>Mesa de Demandas</span>
-    </div>
+    <!-- Barra Superior -->
+    <header class="topbar" id="app-topbar" style="display: none">
+      <div class="brand" data-nav="board">
+        <span class="brand-mark">●</span>
+        <span>Controle de Demandas</span>
+      </div>
 
-    <nav class="main-nav" id="topbar-nav"></nav>
+      <nav class="main-nav" id="topbar-nav"></nav>
 
-    <div class="user-badge">
-      <div id="topbar-user-meta"></div>
-      <button class="button button-secondary button-sm" id="btn-logout" title="Sair da conta">Sair</button>
-    </div>
-  </header>
+      <div class="user-badge">
+        <div id="topbar-user-meta"></div>
+        <button
+          class="button button-secondary button-sm"
+          id="btn-logout"
+          title="Sair da conta"
+        >
+          Sair
+        </button>
+      </div>
+    </header>
 
-  <!-- Container de Autenticação (Login, Registro, Recuperação, Setup) -->
-  <main id="auth-container" class="auth-wrapper" style="display: none;"></main>
+    <!-- Container de Autenticação (Login, Registro, Recuperação, Setup) -->
+    <main id="auth-container" class="auth-wrapper" style="display: none"></main>
 
-  <!-- Container da Aplicação -->
-  <main id="app-container" class="shell" style="display: none;">
-    <div id="view-content"></div>
-  </main>
+    <!-- Container da Aplicação -->
+    <main id="app-container" class="shell" style="display: none">
+      <div id="view-content"></div>
+    </main>
 
-  <script src="/js/api.js"></script>
-  <script src="/js/app.js"></script>
-</body>
+    <script src="/js/api.js"></script>
+    <script src="/js/app.js"></script>
+  </body>
 </html>
